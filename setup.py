@@ -13,6 +13,7 @@ setup(
     long_description='Python implementation of NEAT (NeuroEvolution of Augmenting Topologies), a method ' +
                      'developed by Kenneth O. Stanley for evolving arbitrary neural networks.',
     packages=['neat', 'neat/iznn', 'neat/nn', 'neat/ctrnn'],
+    install_requires=['graphviz'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

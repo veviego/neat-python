@@ -3,7 +3,9 @@
 """
 
 from __future__ import print_function
+from modreporter import ModReporter
 import neat
+
 
 # 2-input XOR inputs and expected outputs.
 xor_inputs = [(0.0, 0.0), (0.0, 1.0), (1.0, 0.0), (1.0, 1.0)]
@@ -28,7 +30,7 @@ config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
 p = neat.Population(config)
 
 # Add a stdout reporter to show progress in the terminal.
-p.add_reporter(neat.StdOutReporter(False))
+p.add_reporter(ModReporter(True))
 
 # Run until a solution is found.
 winner = p.run(eval_genomes)
